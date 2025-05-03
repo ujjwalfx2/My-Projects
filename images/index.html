@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    h1, h3 {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin: 0;
+    }
+    .tab {
+      overflow: hidden;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+    }
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 20px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    .tab button.active {
+      background-color: #ccc;
+    }
+    .tabcontent {
+      display: none;
+      padding: 0;
+      height: calc(100vh - 120px);
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .tabcontent img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header" style="text-align: center; background-color: #333;">
+    <h1 style="display: inline; color: white; padding: 20px; margin: 0;">
+      My Projects
+    </h1>
+    <span style="display: inline-block; color: white; padding: 20px; margin: 0; font-size: 16px;">
+      Sample Dataset Implemented
+    </span>
+  </div>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'PowerBI')" id="defaultOpen">PowerBI</button>
+    <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
+    <button class="tablinks" onclick="openTab(event, 'R')">R</button>
+    <button class="tablinks" onclick="openTab(event, 'Looker')">Looker Studio</button>
+    <button class="tablinks" onclick="openTab(event, 'odk')">ODK Form</button>
+    <button class="tablinks" onclick="openTab(event, 'Access')">MS-Access</button>
+    <button class="tablinks" onclick="openTab(event, 'Excel')">MS-Excel</button>
+  </div>
+
+  <div id="PowerBI" class="tabcontent">
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWI3NGI2ZTktMGM4ZC00MTgwLThjZDMtODljZWY4ZWEyZDRkIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9"></iframe>
+  </div>
+
+  <div id="Python" class="tabcontent">
+    <div style="text-align: right; padding: 10px;">
+      <a href="https://hwcreport.streamlit.app/" target="_blank"> <b>Explore the Python app live</b>
+      </a>
+    </div>    
+    <iframe src="images/Streamlit HWC app.png" alt="Python Tab Preview"></iframe>
+  </div>
+
+  <div id="R" class="tabcontent">
+    <iframe src="https://ujjwal-roy.shinyapps.io/Simpleapp1/"></iframe>
+  </div>
+
+  <div id="Looker" class="tabcontent">
+    <iframe src="https://lookerstudio.google.com/embed/reporting/8098d7c0-e328-4e27-8cb2-41b48ee1e6d3/page/p_z0u56s1mvc"></iframe>
+  </div>
+  
+  <div id="odk" class="tabcontent">
+    <iframe src="https://ee.kobotoolbox.org/x/pSRSAfsX"></iframe>
+  </div>
+
+  <div id="Access" class="tabcontent">
+    <iframe src="https://ujjwal-roy.shinyapps.io/Simpleapp1/"></iframe>
+  </div>
+
+  <div id="Excel" class="tabcontent">
+    <iframe src="images/MS-Excel project.mp4"></iframe>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const tabcontent = document.getElementsByClassName("tabcontent");
+      for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      const tablinks = document.getElementsByClassName("tablinks");
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Open default tab
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+</html>
