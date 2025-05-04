@@ -73,6 +73,8 @@
     <button class="tablinks" onclick="openTab(event, 'odk')">ODK Form</button>
     <button class="tablinks" onclick="openTab(event, 'Access')">MS-Access</button>
     <button class="tablinks" onclick="openTab(event, 'Excel')">MS-Excel</button>
+    <button class="tablinks" onclick="openTab(event, 'Writing')">Writing Sample </button>
+    <button class="tablinks" onclick="openTab(event, 'Certificates')">Certificates</button>
   </div>
 
   <div id="PowerBI" class="tabcontent">
@@ -100,12 +102,31 @@
   </div>
 
   <div id="Access" class="tabcontent">
-    <iframe src="https://ujjwal-roy.shinyapps.io/Simpleapp1/"></iframe>
+    <iframe src="images/MS-Access.png" alt="Python Tab Preview"></iframe>
   </div>
 
-  <div id="Excel" class="tabcontent">
-    <iframe src="images/MS-Excel project.mp4"></iframe>
+
+  <div id="Excel" class="tabcontent" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">
+    <h3>Drug Inventory Management System</h3>
+    <video width="740" height="460" controls>
+      <source src="images/MS-Excel DIMS.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
+
+  <div id="Writing" class="tabcontent">
+    <iframe src="images/Documentation of LRR.pdf" 
+            style="width: 100%; height: 100%; border: none;" 
+            title="Guidance note for Drug Inventory Management System (DIMS) Tool">
+    </iframe>
+  </div>
+
+  <div id="Certificates" class="tabcontent">
+    <h1>The content will be uploaded soon. Thank you for your patience.</h1>
+  </div>
+
+
+
 
   <script>
     function openTab(evt, tabName) {
