@@ -56,15 +56,18 @@
 </head>
 <body>
 
-  <div class="header" style="text-align: center; background-color: #333;">
-    <h1 style="display: inline; color: white; padding: 20px; margin: 0;">
-      My Projects
-    </h1>
-    <span style="display: inline-block; color: white; padding: 20px; margin: 0; font-size: 16px;">
-      Sample Dataset Implemented
-    </span>
+<div style="background-color: #333;  display: flex; justify-content: center; align-items: center; position: relative;">  
+  <!-- Center content: My Projects + Sample Dataset -->
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <h1 style="color: white; margin: 0;">My Projects</h1>
+    <span style="color: white; font-size: 16px;">Sample Dataset Implemented</span>
+  </div>  
+  <!-- Right-aligned Text2 -->
+  <span style="position: absolute; right: 20px; color: white; font-size: 16px;">
+    Total Visitor: <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=ezk7wzc5cqt9cetusl8kkyf43x3j9rrs" border="0" title="Total Visitors" alt="Total Visitors"style="float: right; width: 70px; height: auto">
+  </span>
   </div>
-
+  
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'PowerBI')" id="defaultOpen">PowerBI</button>
     <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
