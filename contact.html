@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Ujjwal Roy</title>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-+ts5M8W04dp2xKFWZ6yO3Ug8F7XxzBQy8I7WYh6+u0/3DfnTTzIWODi+Zb8Vek0Kxtx1QaFyYDhzyylZWLcY4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <style>
+    :root {
+      --bg-main: #f0f0f0;
+      --bg-card: #ffffff;
+      --text-main: #333333;
+      --text-accent: #555555;
+      --accent: #d2a679;
+      --btn-bg: #d2a679;
+      --btn-bg-hover: #b6895a;
+      --btn-text: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text-main);
+      background: var(--bg-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background: var(--bg-card);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 0 0 30%;
+      padding: 30px;
+      background: var(--accent);
+      color: var(--btn-text);
+    }
+
+    .right {
+      flex: 0 0 70%;
+      padding: 30px;
+      background: var(--bg-card);
+    }
+
+    .left h2 {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .left p {
+      margin-bottom: 12px;
+      color: var(--btn-text);
+    }
+
+    .right h1 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      color: var(--text-main);
+      width: 100%;
+    }
+
+    button {
+      padding: 14px;
+      font-size: 1rem;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--btn-bg-hover);
+    }
+
+    .social {
+      margin-top: 25px;
+    }
+
+    .social p {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .social a {
+      margin-right: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: var(--text-accent);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .social i {
+      margin-right: 6px;
+      color: var(--text-accent);
+    }
+
+    .social a:hover {
+      color: var(--text-main);
+    }
+
+    @media(max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        flex: 100%;
+        padding: 20px;
+      }
+
+      .left {
+        text-align: center;
+      }
+
+      .social {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="contact-wrapper">
+      
+      <!-- LEFT COLUMN (30%) -->
+      <div class="left">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> ujjwalfx@gmail.com</p>
+        <p>I’m eager to receive your feedback.</p>
+        <p>Looking forward to new experiences where I can learn, implement, and practice new skills for qualitative and analytical frameworks in programs.</p>
+      </div>
+      
+      <!-- RIGHT COLUMN (70%) -->
+      <div class="right">
+        <h1>Get In Touch</h1>
+        <form action="https://formspree.io/f/xzzgwwoj" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="social">
+          <p>Connect with me:</p>
+          <a href="https://ujjwalfx2.github.io/Ujjal-Roy/" target="_blank">
+            <i class="fa fa-globe fa-fw"></i> Personal Website
+          </a>
+          <a href="https://github.com/ujjwalfx2" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.youtube.com/ujjwalfx?sub_confirmation=1" target="_blank">
+            <i class="fa-brands fa-youtube"></i> YouTube
+          </a>
+          <a href="https://www.linkedin.com/in/ujjwalroy/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://twitter.com/ujjwalfx?s=09" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i> Twitter
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
