@@ -82,8 +82,17 @@
     <button class="tablinks" onclick="openWebsiteTab()">Website</button>
   </div>
 
+  <!-- PowerBI Tab with dropdown -->
   <div id="PowerBI" class="tabcontent">
-    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWI3NGI2ZTktMGM4ZC00MTgwLThjZDMtODljZWY4ZWEyZDRkIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9"></iframe>
+    <div style="text-align: left; margin: 10px;">
+      <label for="stateSelect"><b>Select State:</b></label>
+      <select id="stateSelect" onchange="updateReport()">
+        <option value="jharkhand">Jharkhand</option>
+        <option value="bihar">Bihar</option>
+        <option value="odisha">Odisha</option>
+      </select>
+    </div>
+    <iframe id="powerbiFrame" src="https://app.powerbi.com/view?r=eyJrIjoiYWI3NGI2ZTktMGM4ZC00MTgwLThjZDMtODljZWY4ZWEyZDRkIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9"></iframe>
   </div>
 
   <div id="Python" class="tabcontent">
@@ -154,6 +163,21 @@
 
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
+    }
+
+    function updateReport() {
+      const state = document.getElementById("stateSelect").value;
+      const iframe = document.getElementById("powerbiFrame");
+      let url = "";
+
+      if (state === "jharkhand") {
+        url = "https://app.powerbi.com/view?r=eyJrIjoiYWI3NGI2ZTktMGM4ZC00MTgwLThjZDMtODljZWY4ZWEyZDRkIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9";
+      } else if (state === "bihar") {
+        url = "https://app.powerbi.com/view?r=eyJrIjoiNzFiNzk0NzAtNGU2Ni00ODZlLTkwZjItMDhlZDE4Mjc3ODBhIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9";
+      } else if (state === "odisha") {
+        url = "https://app.powerbi.com/view?r=eyJrIjoiNjQxNzIzNDMtODQ5Ni00N2M2LTg1ZjItMmI4NGUzYmIwMzE5IiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9";
+      }
+      iframe.src = url;
     }
 
     // Open default tab
