@@ -69,7 +69,8 @@
   </div>
   
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'PowerBI')" id="defaultOpen">PowerBI</button>
+    <button class="tablinks" onclick="openTab(event, 'PowerBI')" id="defaultOpen">PowerBI</button>    
+    <button class="tablinks" onclick="openTableauTab()">Tableau</button>
     <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
     <button class="tablinks" onclick="openTab(event, 'R')">R</button>
     <button class="tablinks" onclick="openTab(event, 'Looker')">Looker Studio</button>
@@ -94,7 +95,7 @@
     </div>
     <iframe id="powerbiFrame" src="https://app.powerbi.com/view?r=eyJrIjoiYWI3NGI2ZTktMGM4ZC00MTgwLThjZDMtODljZWY4ZWEyZDRkIiwidCI6IjI2ZWY3ZmQyLTJhN2YtNDEzNS1hMmU0LWRlOWFjZjE2OGIyYSIsImMiOjF9"></iframe>
   </div>
-
+  
   <div id="Python" class="tabcontent">
     <div style="text-align: right; padding: 10px;">
       <a href="https://hwcreport.streamlit.app/" target="_blank"> <b>Explore the Python app live</b>
@@ -147,6 +148,11 @@
     function openWebsiteTab() {
       window.open("https://ujjwalfx2.github.io/Ujjal-Roy/", "_blank");
     }
+
+    function openTableauTab() {
+      window.open("https://public.tableau.com/app/profile/ujjwal.roy3010/viz/GooglesheetDataDashboard-Tableau/Dashboard2?publish=yes", "_blank");
+    }
+
   </script>
   
   <script>
